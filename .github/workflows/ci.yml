@@ -39,7 +39,8 @@ jobs:
 
 
       - name: Run unit tests
-        run: mvn test
+        run: mvn test -Dsurefire.failIfNoTests=false
+        #If there are no tests to run, the code will not break.
 
       - name: Upload test reports
         uses: actions/upload-artifact@v4

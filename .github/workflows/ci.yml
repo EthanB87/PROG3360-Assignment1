@@ -39,7 +39,7 @@ jobs:
 
 
       - name: Run unit tests
-        run: Run unit tests
+        run: |
             mvn -f ProductService/pom.xml test -Dsurefire.failIfNoTests=false
             mvn -f OrderService/pom.xml test -Dsurefire.failIfNoTests=false
 

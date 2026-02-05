@@ -39,7 +39,10 @@ jobs:
 
 
       - name: Run unit tests
-        run: mvn test -Dsurefire.failIfNoTests=false
+        run: Run unit tests
+            mvn -f ProductService/pom.xml test -Dsurefire.failIfNoTests=false
+            mvn -f OrderService/pom.xml test -Dsurefire.failIfNoTests=false
+
         #If there are no tests to run, the code will not break.
 
       - name: Upload test reports

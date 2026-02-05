@@ -20,17 +20,17 @@ public class OrderController {
     }
 
     @GetMapping()
-    private List<Order> GetOrders() {
+    public List<Order> GetOrders() {
         return _orderRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    private Order GetOrderById(@PathVariable Long id) {
+    public Order GetOrderById(@PathVariable Long id) {
         return _orderRepository.findById(id).orElseThrow();
     }
 
     @PostMapping()
-    private Order CreateOrder(@RequestBody Order order) {
+    public Order CreateOrder(@RequestBody Order order) {
         ProductDto product = _productClient.GetProductById(order.getProductId());
 
         if (product.quantity() < order.getQuantity()) {

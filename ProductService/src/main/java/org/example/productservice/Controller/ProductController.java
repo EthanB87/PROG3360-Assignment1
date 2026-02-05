@@ -16,22 +16,22 @@ public class ProductController {
     }
 
     @GetMapping()
-    private List<Product> GetProducts() {
+    public List<Product> GetProducts() {
         return _productRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    private Product GetProductById(@PathVariable Long id) {
+    public Product GetProductById(@PathVariable Long id) {
         return _productRepository.findById(id).orElseThrow();
     }
 
     @PostMapping()
-    private Product AddProduct(@RequestBody Product product) {
+    public Product AddProduct(@RequestBody Product product) {
         return _productRepository.save(product);
     }
 
     @DeleteMapping("/{id}")
-    private void DeleteProduct(@PathVariable Long id) {
+    public void DeleteProduct(@PathVariable Long id) {
         _productRepository.deleteById(id);
     }
 }

@@ -6,10 +6,10 @@
 
 <!-- TODO: ENTER YOUR STUDENT NUMBERS -->
 
-- Jack Graul
-- Ethan Brockman
-- Elowynne Xiong
-- Alby Mathews Bruse
+- Jack Graul (8880032)
+- Ethan Brockman (8830509)
+- Elowynne Xiong (8965293)
+- Alby Mathews Bruse (8980406)
 - Parth Gajjar (8959999)
 
 ### Project Structure:

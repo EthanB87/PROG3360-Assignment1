@@ -12,8 +12,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-#    branches: [ "main" ]
-# Branch pull requests are not required for pipeline therefore I commented it out of the file 
+    branches: [ "main" ] 
 
 #Job 1: Build & Test
 jobs:

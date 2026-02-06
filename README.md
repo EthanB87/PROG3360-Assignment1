@@ -4,8 +4,6 @@
 
 **Group 5**
 
-<!-- TODO: ENTER YOUR STUDENT NUMBERS -->
-
 - Jack Graul (8880032)
 - Ethan Brockman (8830509)
 - Elowynne Xiong (8965293)

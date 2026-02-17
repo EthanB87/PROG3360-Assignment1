@@ -28,7 +28,7 @@ public class ProductController {
         return _productRepository.findById(id).orElseThrow();
     }
 
-    @GetMapping("/api/products/premium")
+    @GetMapping("/premium")
     public List<Product> getPremiumProducts() {
 
         boolean premiumEnabled = _featureFlagService.isPremiumPricingEnabled();

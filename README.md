@@ -1,10 +1,8 @@
-# PROG3360-Assignment1
+# PROG3360-Assignment2
 
 ### Team Members:
 
 **Group 5**
-
-<!-- TODO: ENTER YOUR STUDENT NUMBERS -->
 
 - Jack Graul (8880032)
 - Ethan Brockman (8830509)
@@ -17,6 +15,7 @@
 - `/OrderService/` - Contains the Order Service microservice code.
 - `/ProductService/` - Contains the Product Service microservice code.
 - `/Screenshots/` - Contains evidence screenshots.
+- `/Scripts/` - Contains a script to initialize feature flags for unleash.
 - `/README.md` - This file, providing an overview of the project and instructions.
 - `API_Test.postman_collection.json` - Postman collection for testing the APIs.
 - `docker-compose.yml` - Docker Compose file to set up the microservices.
@@ -26,6 +25,14 @@
 1. Unzip the project folder.
 2. Open a terminal and navigate to the project directory.
 3. Run `docker compose up --build` to build and start the microservices. (Make sure Docker is running)
-4. Open Postman and import the `API_Test.postman_collection.json` file.
-5. Use the imported collection to test the APIs for both Order Service and Product Service.
-6. (optional) You can use `docker compose down` to stop and remove the containers when done.
+
+### Unleash (temporary while unleash-flag-init is in progress)
+4. Once the unleash container is running go to localhost:4242 and login with username: admin and password: unleash4all.
+5. Go to profile settings and create a personal access token. Use this token for the unleash-init-flags container in docker-compose.yml.
+6. Go to API Access and create a client API token. Use this token for both microservices containers in docker-compose.yml.
+7. Create flags in default project.
+8. To stop running, run docker-compose down (not docker-compose down -v) or the volume is erased and the api tokens are no longer correct.
+
+9. Open Postman and import the `API_Test.postman_collection.json` file.
+10. Use the imported collection to test the APIs for both Order Service and Product Service.
+11. (optional) You can use `docker compose down` to stop and remove the containers when done.

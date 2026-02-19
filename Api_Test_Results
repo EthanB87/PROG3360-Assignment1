@@ -1,22 +1,22 @@
 {
-	"id": "d7cfccff-d896-49b2-94a0-569d41ad1eb5",
+	"id": "39269f74-b8a5-4d30-ae62-706b4256d18f",
 	"name": "Order and Product Services API",
-	"timestamp": "2026-02-06T11:07:45.081Z",
-	"collection_id": "43789293-8a27a1fe-b0ed-4812-9007-81ab09864f5a",
+	"timestamp": "2026-02-19T03:37:59.197Z",
+	"collection_id": "48798776-49d346ec-6419-443e-8070-72ee5089f5ad",
 	"folder_id": 0,
 	"environment_id": "0",
 	"totalPass": 0,
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2026-02-06T11:07:42.502Z",
+	"startedAt": "2026-02-19T03:37:55.225Z",
 	"totalFail": 0,
 	"results": [
 		{
-			"id": "ec6c4c2d-df5f-4ae8-a1ec-27f41534ec6e",
+			"id": "28fe28d5-0bc5-44db-9dd1-9fd477f819a3",
 			"name": "Add Product",
 			"url": "http://localhost:8081/api/products",
-			"time": 460,
+			"time": 577,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -24,17 +24,17 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				460
+				577
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "71923cba-1a1d-491a-a071-106b519707d2",
+			"id": "b31760ab-be54-404b-9381-ea36db914ca0",
 			"name": "Get All Products",
 			"url": "http://localhost:8081/api/products",
-			"time": 203,
+			"time": 405,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -42,17 +42,17 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				203
+				405
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "a455ea55-433c-4871-b976-a4a49ba99c9c",
+			"id": "7c0acaea-9998-4778-9b21-99349dc0ddb0",
 			"name": "Get Product by ID",
 			"url": "http://localhost:8081/api/products/1",
-			"time": 24,
+			"time": 40,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -60,17 +60,35 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				24
+				40
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "9d0e2a5e-9670-4f4e-b07e-3ff0f6b512d9",
+			"id": "7b89a98f-77e2-4661-b859-c3314c0c6852",
+			"name": "Get Premium Products",
+			"url": "http://localhost:8081/api/products/premium",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				49
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ba125b7b-7bd9-4b45-b9e7-90d92bf29e4b",
 			"name": "Create Order",
 			"url": "http://localhost:8082/api/orders",
-			"time": 481,
+			"time": 976,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -78,17 +96,35 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				481
+				976
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "122b5035-9f78-4a18-8e8c-6151d62fa477",
+			"id": "65933d25-9eca-4710-9694-f256369f9380",
+			"name": "Create Bulk Order",
+			"url": "http://localhost:8082/api/orders",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "aee93b2f-6336-4aa2-9a11-7b09fcb05230",
 			"name": "Get All Orders",
 			"url": "http://localhost:8082/api/orders",
-			"time": 150,
+			"time": 335,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -96,17 +132,17 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				150
+				335
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "eb0ada60-67de-42c7-82de-7611ef842e0c",
+			"id": "40a4322a-7a96-4dae-ad80-61e445b0c4e4",
 			"name": "Get Order by ID",
 			"url": "http://localhost:8082/api/orders/1",
-			"time": 12,
+			"time": 33,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -114,17 +150,17 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				12
+				33
 			],
 			"allTests": [
 				{}
 			]
 		},
 		{
-			"id": "72331c52-543f-4138-965b-6a4a0e4edb96",
+			"id": "f9aaa7f3-444f-4372-a096-f578954c6b1c",
 			"name": "Delete Product",
 			"url": "http://localhost:8081/api/products/1",
-			"time": 11,
+			"time": 60,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -132,7 +168,7 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				11
+				60
 			],
 			"allTests": [
 				{}
@@ -140,35 +176,43 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 1341,
+	"totalTime": 2510,
 	"collection": {
 		"requests": [
 			{
-				"id": "ec6c4c2d-df5f-4ae8-a1ec-27f41534ec6e",
+				"id": "28fe28d5-0bc5-44db-9dd1-9fd477f819a3",
 				"method": "POST"
 			},
 			{
-				"id": "71923cba-1a1d-491a-a071-106b519707d2",
+				"id": "b31760ab-be54-404b-9381-ea36db914ca0",
 				"method": "GET"
 			},
 			{
-				"id": "a455ea55-433c-4871-b976-a4a49ba99c9c",
+				"id": "7c0acaea-9998-4778-9b21-99349dc0ddb0",
 				"method": "GET"
 			},
 			{
-				"id": "9d0e2a5e-9670-4f4e-b07e-3ff0f6b512d9",
+				"id": "7b89a98f-77e2-4661-b859-c3314c0c6852",
+				"method": "GET"
+			},
+			{
+				"id": "ba125b7b-7bd9-4b45-b9e7-90d92bf29e4b",
 				"method": "POST"
 			},
 			{
-				"id": "122b5035-9f78-4a18-8e8c-6151d62fa477",
+				"id": "65933d25-9eca-4710-9694-f256369f9380",
+				"method": "POST"
+			},
+			{
+				"id": "aee93b2f-6336-4aa2-9a11-7b09fcb05230",
 				"method": "GET"
 			},
 			{
-				"id": "eb0ada60-67de-42c7-82de-7611ef842e0c",
+				"id": "40a4322a-7a96-4dae-ad80-61e445b0c4e4",
 				"method": "GET"
 			},
 			{
-				"id": "72331c52-543f-4138-965b-6a4a0e4edb96",
+				"id": "f9aaa7f3-444f-4372-a096-f578954c6b1c",
 				"method": "DELETE"
 			}
 		]

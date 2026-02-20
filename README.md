@@ -30,7 +30,8 @@
 4. Once the unleash container is running go to `localhost:4242` and login with `username: admin` and `password: unleash4all`.
 5. Go to profile settings and create a personal access token. Use this token for the unleash-init-flags container in `docker-compose.yml`.
 6. Go to API Access and create a client API token. Use this token for both microservices containers in `docker-compose.yml`.
-7. Once the tokens are added to `docker-compose.yml` run `docker-compose up --build` to start all the containers and the feature flags should be initialized.
+7. Make sure to open init-flags.sh in VS Code to ensure line endings are set to `LF` not `CRLF`.
+8. Once the tokens are added to `docker-compose.yml` run `docker-compose up --build` to start all the containers and the feature flags should be initialized.
 8. To stop running, run `docker-compose down` (not `docker-compose down -v`) or the volume is erased and the api tokens are no longer correct.
 
 9. Open Postman and import the `API_Test.postman_collection.json` file.

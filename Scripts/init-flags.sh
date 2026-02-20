@@ -38,7 +38,7 @@ for FEATURE_NAME in $FEATURES; do
         echo "Feature '$FEATURE_NAME' already exists."
     else
         echo "Creating feature '$FEATURE_NAME'..."
-        curl -s -X POST "$UNLEASH_URL/admin/features" \
+        curl -s -X POST "$UNLEASH_URL/admin/projects/$PROJECT/features" \
             -H "Authorization: $ADMIN_TOKEN" \
             -H "Content-Type: application/json" \
             -d "{

@@ -47,7 +47,7 @@ services:
     networks:
       - spring-net
     environment:
-      UNLEASH_ADMIN_TOKEN: "user:4155292c04214cb643ab763c793f0b507b9ccdd4d6890903a494c139"
+      UNLEASH_ADMIN_TOKEN: "user:29abbc4369aa8714e0105f8807656d200e6544cf3dfec8700e47534f"
       UNLEASH_URL: "http://unleash-server:4242/api"
     entrypoint: [ "sh", "-c", "apk add --no-cache curl jq bash && /app/init-flags.sh" ]
     volumes:
@@ -65,7 +65,7 @@ services:
         condition: service_healthy
     environment:
       UNLEASH_API_URL: "http://unleash-server:4242/api"
-      UNLEASH_API_TOKEN: "*:development.127034a20881685930e211437991c9d318507ccdb21b6b297abac43a"
+      UNLEASH_API_TOKEN: "*:development.ec67567d8e5c8d91572a5e25e80529772d57ab317401faed771eb5cb"
       UNLEASH_ENVIRONMENT: "development"
       UNLEASH_PROJECT: "default"
     networks:
@@ -89,7 +89,7 @@ services:
         condition: service_started
     environment:
       UNLEASH_API_URL: "http://unleash-server:4242/api"
-      UNLEASH_API_TOKEN: "*:development.127034a20881685930e211437991c9d318507ccdb21b6b297abac43a"
+      UNLEASH_API_TOKEN: "*:development.ec67567d8e5c8d91572a5e25e80529772d57ab317401faed771eb5cb"
       UNLEASH_ENVIRONMENT: "development"
       UNLEASH_PROJECT: "default"
     networks:

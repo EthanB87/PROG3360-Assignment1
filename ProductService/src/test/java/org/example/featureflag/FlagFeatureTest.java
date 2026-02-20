@@ -1,4 +1,4 @@
-package org.example.productservice;
+package org.example.featureflag;
 
 import io.getunleash.Unleash;
 import org.example.productservice.Service.FeatureFlagService;

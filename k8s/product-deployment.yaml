@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: product-service:latest  # Replace with your built image
+        image: product-service:v2  # Replace with your built image
+        imagePullPolicy: Never          # use local image, avoid ImagePullBackOff
         ports:
         - containerPort: 8081
         envFrom:

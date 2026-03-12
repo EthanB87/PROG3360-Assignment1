@@ -18,6 +18,7 @@ spec:
       containers:
       - name: order-service
         image: order-service:latest  # Replace with your built image
+        imagePullPolicy: Never          # use local image, avoid ImagePullBackOff
         ports:
         - containerPort: 8082
         envFrom:

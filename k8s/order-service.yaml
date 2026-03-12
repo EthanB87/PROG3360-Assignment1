@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: order-service
+spec:
+  selector:
+    app.kubernetes.io/name: MyApp  # Probably should change
+  ports:
+  # Ports should be changed probably...
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082

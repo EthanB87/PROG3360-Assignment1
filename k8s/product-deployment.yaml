@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-deployment
+  labels:
+    app: nginx  # Probably should change
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx  # Probably should change
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      # Probably should change
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80 # Probably should change

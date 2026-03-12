@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: product-deployment
+  name: product-service
+  namespace: assignment3
   labels:
-    app: nginx  # Probably should change
+    app: product-service
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx  # Probably should change
+      app: product-service
   template:
     metadata:
       labels:
-        app: nginx
+        app: product-service
     spec:
-      # Probably should change
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: product-service
+        image: product-service:latest  # Replace with your built image
         ports:
-        - containerPort: 80 # Probably should change
+        - containerPort: 8081
+        envFrom:
+        - configMapRef:
+            name: app-config

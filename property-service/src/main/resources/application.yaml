@@ -1,0 +1,50 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: property-service
+  
+  # Distributed Tracing Configuration
+  threads:
+    virtual:
+      enabled: true # Optional: use virtual threads for better throughput
+  tracing:
+    sampling:
+      probability: 1.0 # Sample 100% of requests for demo
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  
+  # Custom Info Metadata
+  info:
+    env:
+      enabled: true
+  
+  # Prometheus Scrape Configuration
+  observations:
+    key-values:
+      application: ${spring.application.name}
+  metrics:
+    tags:
+      application: ${spring.application.name}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+
+info:
+  app:
+    name: Domexa Property Service
+    description: Microservice for property management
+    version: 1.0.0
+    team: Observability Task Force
+    system: Domexa Rentals

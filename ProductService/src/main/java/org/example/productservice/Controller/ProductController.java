@@ -44,6 +44,13 @@ public class ProductController {
                 .toList();
     }
 
+    // Simulated Slow Endpoint
+    @GetMapping("/slow")
+    public List<Product> GetProductsSlow() throws InterruptedException {
+        Thread.sleep(5000); // Simulate a 5-second delay
+        return _productRepository.findAll();
+    }
+
     @PostMapping()
     public Product AddProduct(@RequestBody Product product) {
         return _productRepository.save(product);
